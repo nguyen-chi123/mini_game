@@ -1,0 +1,10 @@
+Làm rất chuẩn chỉ, em đã biết làm Ajax để trang game trở nên chuyên nghiệp hơn
+
+A chỉ có góp ý nhỏ là phần này
+
+```$fp = fopen($filename, "r");//mở file ở chế độ đọc
+    $old = fread($fp, filesize($filename));//đọc file```
+    
+thì e nên nhét vào trong cái ```if(isset($_POST['choose'])){``` vì logic chỗ này là chỉ khi nào call ajax post kiểm tra kết quả thì mới mở file để đọc
+
+Còn lại good

@@ -44,16 +44,17 @@ body{
     position: absolute;
     width: 750px;
     height: 300px;
-    top: calc(50% - 200px);
+    top: calc(50% - 150px);
     left: calc(50% - 375px);
     background-image: linear-gradient(rgb(226, 79, 21),rgb(241, 221, 38) );
-    line-height: 150px;
+    line-height: 100px;
     text-align: center;
     font-size: 60px;
     text-transform: uppercase;
     color: #fff;
+    font-family: cursive;
+    border-radius: 10px;
 }
-
 
 .question{
     display: flex;
@@ -112,6 +113,7 @@ body{
     font-family:cursive;
     cursor: pointer;
 }
+
 .submit{
     position: absolute;
     bottom: 10px;
@@ -126,13 +128,13 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     box-shadow: 0 5px rgb(65, 85, 65);
 }
-.time{
+.time, .show-rating{
     position: absolute;
     bottom: 10px;
-    width: 240px;
+    
     height: 50px;
-    right: 20px;
-    background-color: rgb(80, 233, 42);
+    
+    
     border-radius: 5px;
     border: 0;
    
@@ -141,4 +143,111 @@ body{
     box-shadow: 0 5px rgb(65, 85, 65);
     text-align: center;
     line-height: 50px;
+}
+.time{
+    width: 240px;
+    right: 20px;
+    background-color: rgb(80, 233, 42);
+}
+.show-rating{
+    padding-left: 20px;
+    padding-right: 20px;
+    left: 90px;
+    font-size: 18px;
+    background-color: rgb(235, 107, 21);
+    font-size: 500;
+    font-family: cursive;
+    color: #fff;
+}
+div .btn-end{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+.btn-end button, .save{
+    background-color: rgb(50, 124, 124);
+    color: #fff;
+    border: 3px solid rgb(4, 116, 116);
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 17px;
+    font-family: cursive;  
+}
+.btn-end button, .save:hover{
+    background-color: rgb(59, 161, 161);
+}
+.enter{
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    top: calc(50% - 50px);
+    left: calc(50% - 250px);
+    background-image: linear-gradient(rgb(226, 79, 21),rgb(241, 221, 38));
+    line-height: 100px;
+    border-radius: 10px;
+}
+input{
+    width: 60%;
+    padding: 8px 20px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: 3px solid rgb(4, 116, 116);
+    margin-left: 33px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+input:focus{
+    border: 3px solid rgb(226, 79, 21);
+    border-radius: 10px;
+}
+
+.rating{
+    position: absolute;
+    width: 750px;
+    height: 500px;
+    background-color: rgb(226, 185, 132);
+    border-radius: 10px;
+    top: calc(50% - 250px);
+    left: calc(50% - 375px);
+    display: flex;
+    flex-direction: column;
+    padding:50px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+
+}
+
+#tb-rating {
+    font-family: Arial, Helvetica, sans-serif;
+    border-spacing: 0;
+    margin: auto;
+    width: 90%;
+    font-size: 16px;
+  }
+#tb-rating td, #tb-rating th {
+    border: 1px solid rgb(228, 170, 94);
+    padding: 8px;
+    background-color:#fff;
+}
+#tb-rating th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(212, 137, 38);
+    color: white;
+    text-align: center;
+}
+#tb-rating tr:nth-child(even){background-color: #eee;}
+
+#tb-rating tr:hover {background-color: #ddd;}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(226, 185, 132);
+} 
+::-webkit-scrollbar-thumb {
+    background-color: rgb(212, 137, 38);
 }

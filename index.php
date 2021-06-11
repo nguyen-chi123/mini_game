@@ -16,36 +16,14 @@
         <div class="over" id="loss">
             GAME OVER! <br>
             YOUR SCORE IS <span></span>.
-            <div class="btn-end">
-                <button class="quit">Quit</button>
-                <button class="save-info">Save</button>
-            </div>
         </div>
         <div class="over" id="win">
             YOU WIN!<br>
-            YOUR SCORE IS <span></span>.
-            <div class="btn-end">
-                <button class="quit">Quit</button>
-                <button class="save-info">Save</button>
-            </div>
+            YOUR SCORE IS <span></span>
         </div>
-        <div class="enter">
-            <input type="text" value="" id="username" name="username" placeholder="username">
-            <button class="save">Submit</button>
+        <div class="question">
+            
         </div>
-        <div class="rating">
-            <table id="tb-rating">
-                <tr>
-                    <th style="width: 70%;">Tên người chơi</th>
-                    <th>Điểm</th>
-                </tr>
-                <!-- <tr>
-                    <td></td>
-                    <td></td>
-                </tr> -->
-            </table>
-        </div>
-        <div class="question"></div>
         <div class="low">
             <div class="info">Click on the correct answer </div>
             <div class="answer">
@@ -55,7 +33,7 @@
                 <div class="answer-item" id="answer_4"></div>
             </div>
         </div>
-        <button class="show-rating">Ratings</button>
+        
         <button class="submit" id="sub">
             Start Game
         </button>
@@ -63,24 +41,19 @@
     </div>
     
 </body>
-<script src="./js/controller.js"></script>
-<!-- <script>
+<script>
     var s;
     var timer = setInterval( calltimer, 1000);
     var score = 0;
     var win = 1000;
      $(document).ready(function(){
-
+        
+        var check = true;
         $(".score span").append(score);
         $(".time").hide();
         $(".correct").hide();
         $("#loss").hide();
         $("#win").hide();
-        $(".enter").hide();
-        $(".rating").hide();
-        $(".show-rating").hide();
-        
-        var check = true;
         var start = true;
         
         $("#sub").click(function(){
@@ -151,61 +124,6 @@
                 });
             
         });
-        $(".save-info").click(function(){
-            $("#loss").hide();
-            $(".enter").show();
-        })
-        $(".save").click(function(){
-            var name = $("#username").val();
-            if(name==""){
-                alert("Bạn chưa nhập tên");
-                name="unname";
-            }
-            
-            var score_end = score;
-            $.ajax({
-                    method: "POST",
-                    url: "./player.php",
-                    data: {"username":name, "score":score_end}
-                })
-                .done(function(response) {
-                    
-                })
-                .fail(function(){
-                    alert( "error" );
-                });
-            
-            $(".enter").hide();
-            $(".show-rating").show();
-            
-        });
-        $(".quit").click(function(){
-            $(".time").hide();
-            $("#loss").hide();
-            $(".show-rating").show();
-            deleteQuestion();
-        });
-
-        $(".show-rating").click(function(){
-            $.ajax({
-                    method: "GET",
-                    url: "./player.php"
-                })
-                .done(function(response) {
-                    var res=JSON.parse(response);
-                    console.log(typeof(res));
-                    $.each(res, function(index, value){
-                        $("#tb-rating").append("<tr><td>"+value["username"]+"</td><td>"+value["score"]+"</td></tr>");
-                    });
-                })
-                .fail(function(){
-                    alert( "error" );
-            });
-            $(".rating").show();
-            $(".show-rating").hide();
-            $(".time").hide();
-        });
-
     });
     
     function showQuestion(res){
@@ -238,5 +156,5 @@
         
     }
     
-</script> -->
+</script>
 </html>

@@ -1,11 +1,10 @@
-
 <?php
     $filename = "./data.txt";
-    $fp = fopen($filename, "r");//mở file ở chế độ đọc
-    $old = fread($fp, filesize($filename));//đọc file
     $choose = null;
     $check = null;
     if(isset($_POST['choose'])){
+        $fp = fopen($filename, "r");//mở file ở chế độ đọc
+        $old = fread($fp, filesize($filename));//đọc file
         $choose = $_POST['choose'];
         if($choose == $old || $old==null){
             $check = true; 
@@ -18,7 +17,7 @@
     $min = 0;
     $max = 100;
     $time = 30;
-    $win = 10;
+    $win = 20;
     $a = random_int($min, $max);
     $b = random_int($min, $max);
     $operator = random_int(1, 3);
@@ -87,7 +86,7 @@
 
 
    
-    /// version2 
+
 // $host="localhost";
 // $username="root";
 // $password="";

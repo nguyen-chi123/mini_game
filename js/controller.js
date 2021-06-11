@@ -1,70 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/home.css">
-    <script src="./js/jquery-3.6.0.min.js"></script>
-    <title>Document</title>
-</head>
 
-<body>
-    <div class="container">
-        <div class="score">Score: <span></span></div>
-        <div class="correct">Correct</div>
-        <div class="over" id="loss">
-            GAME OVER! <br>
-            YOUR SCORE IS <span></span>.
-            <div class="btn-end">
-                <button class="quit">Quit</button>
-                <button class="save-info">Save</button>
-            </div>
-        </div>
-        <div class="over" id="win">
-            YOU WIN!<br>
-            YOUR SCORE IS <span></span>.
-            <div class="btn-end">
-                <button class="quit">Quit</button>
-                <button class="save-info">Save</button>
-            </div>
-        </div>
-        <div class="enter">
-            <input type="text" value="" id="username" name="username" placeholder="username">
-            <button class="save">Submit</button>
-        </div>
-        <div class="rating">
-            <table id="tb-rating">
-                <tr>
-                    <th style="width: 70%;">Tên người chơi</th>
-                    <th>Điểm</th>
-                </tr>
-                <!-- <tr>
-                    <td></td>
-                    <td></td>
-                </tr> -->
-            </table>
-        </div>
-        <div class="question"></div>
-        <div class="low">
-            <div class="info">Click on the correct answer </div>
-            <div class="answer">
-                <div class="answer-item" id="answer_1"></div>
-                <div class="answer-item" id="answer_2"></div>
-                <div class="answer-item" id="answer_3"></div>
-                <div class="answer-item" id="answer_4"></div>
-            </div>
-        </div>
-        <button class="show-rating">Ratings</button>
-        <button class="submit" id="sub">
-            Start Game
-        </button>
-        <div class="time">Time remaining: <span id = "s"></span> sec</div>
-    </div>
-    
-</body>
-<script src="./js/controller.js"></script>
-<!-- <script>
     var s;
     var timer = setInterval( calltimer, 1000);
     var score = 0;
@@ -237,6 +171,3 @@
         s--;
         
     }
-    
-</script> -->
-</html>
